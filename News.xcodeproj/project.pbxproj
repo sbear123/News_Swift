@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		4388B8A5267F263500F24384 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4388B8A4267F263500F24384 /* Preview Assets.xcassets */; };
 		4388B8B0267F263500F24384 /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388B8AF267F263500F24384 /* NewsTests.swift */; };
 		4388B8BB267F263600F24384 /* NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4388B8BA267F263600F24384 /* NewsUITests.swift */; };
+		43A4DB18268011AB00869C0A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4DB17268011AB00869C0A /* NewsViewModel.swift */; };
+		43A4DB1D268022BC00869C0A /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 43A4DB1C268022BC00869C0A /* URLImageStore */; };
+		43A4DB1F268022BC00869C0A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 43A4DB1E268022BC00869C0A /* URLImage */; };
+		43A4DB212680392000869C0A /* GetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4DB202680392000869C0A /* GetImage.swift */; };
+		43A4DB232680693200869C0A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A4DB222680693200869C0A /* NewsModel.swift */; };
+		43A4DB2A2681614C00869C0A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43A4DB2C2681614C00869C0A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,13 @@
 		4388B8B6267F263600F24384 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4388B8BA267F263600F24384 /* NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITests.swift; sourceTree = "<group>"; };
 		4388B8BC267F263600F24384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A4DB17268011AB00869C0A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		43A4DB202680392000869C0A /* GetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImage.swift; sourceTree = "<group>"; };
+		43A4DB222680693200869C0A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		43A4DB2B2681614C00869C0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A4DB2D268161A700869C0A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A4DB2E268161B700869C0A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A4DB2F268162DA00869C0A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A4DB1F268022BC00869C0A /* URLImage in Frameworks */,
+				43A4DB1D268022BC00869C0A /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +110,15 @@
 		4388B89C267F263500F24384 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				4388B89D267F263500F24384 /* NewsApp.swift */,
-				4388B89F267F263500F24384 /* ContentView.swift */,
-				4388B8A1267F263500F24384 /* Assets.xcassets */,
 				4388B8A6267F263500F24384 /* Info.plist */,
+				4388B89F267F263500F24384 /* ContentView.swift */,
+				43A4DB202680392000869C0A /* GetImage.swift */,
+				43A4DB17268011AB00869C0A /* NewsViewModel.swift */,
+				4388B89D267F263500F24384 /* NewsApp.swift */,
+				4388B8A1267F263500F24384 /* Assets.xcassets */,
 				4388B8A3267F263500F24384 /* Preview Content */,
+				43A4DB222680693200869C0A /* NewsModel.swift */,
+				43A4DB2C2681614C00869C0A /* Localizable.strings */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -146,6 +165,10 @@
 			dependencies = (
 			);
 			name = News;
+			packageProductDependencies = (
+				43A4DB1C268022BC00869C0A /* URLImageStore */,
+				43A4DB1E268022BC00869C0A /* URLImage */,
+			);
 			productName = News;
 			productReference = 4388B89A267F263500F24384 /* News.app */;
 			productType = "com.apple.product-type.application";
@@ -214,9 +237,15 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ko,
+				ja,
+				"zh-Hans",
 				Base,
 			);
 			mainGroup = 4388B891267F263500F24384;
+			packageReferences = (
+				43A4DB1B268022BC00869C0A /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 4388B89B267F263500F24384 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4388B8A5267F263500F24384 /* Preview Assets.xcassets in Resources */,
+				43A4DB2A2681614C00869C0A /* Localizable.strings in Resources */,
 				4388B8A2267F263500F24384 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43A4DB212680392000869C0A /* GetImage.swift in Sources */,
+				43A4DB18268011AB00869C0A /* NewsViewModel.swift in Sources */,
 				4388B8A0267F263500F24384 /* ContentView.swift in Sources */,
 				4388B89E267F263500F24384 /* NewsApp.swift in Sources */,
+				43A4DB232680693200869C0A /* NewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +328,26 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		43A4DB2C2681614C00869C0A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43A4DB2B2681614C00869C0A /* en */,
+				43A4DB2D268161A700869C0A /* ko */,
+				43A4DB2E268161B700869C0A /* ja */,
+				43A4DB2F268162DA00869C0A /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4388B8BD267F263600F24384 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -361,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -580,6 +629,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43A4DB1B268022BC00869C0A /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		43A4DB1C268022BC00869C0A /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43A4DB1B268022BC00869C0A /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		43A4DB1E268022BC00869C0A /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43A4DB1B268022BC00869C0A /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4388B892267F263500F24384 /* Project object */;
 }

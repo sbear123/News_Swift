@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  News
+
+  Created by 박지현 on 2021/06/22.
+  
+*/
+"News List" = "ニュースリスト";
+"Go News" = "ニュースを見る";
+"author : %@" = "著者 : %@";
+"publishedAt : %@" = "に公開 : %@";
+"us" = "jp";
